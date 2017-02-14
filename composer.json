@@ -1,8 +1,8 @@
 {
   "name": "jgimeno/value-objects",
-  "description": "Collection of value objects to use on different projects.",
-  "minimum-stability": "dev",
   "type": "library",
+  "description": "Collection of PHP value objects to use and extend as building blocks for DDD.",
+  "keywords": ["value", "value objects", "value object", "identifiers"],
   "license": "MIT",
   "authors": [
     {
