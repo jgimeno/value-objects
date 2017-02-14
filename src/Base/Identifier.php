@@ -31,11 +31,11 @@ class Identifier extends ValueObject
 
     public static function generate(): self
     {
-        return new self(Uuid::uuid1());
+        return new static(Uuid::uuid1());
     }
 
     public static function fromString(string $identifier)
     {
-        return new self(Uuid::fromString($identifier));
+        return new static(Uuid::fromString($identifier));
     }
 }

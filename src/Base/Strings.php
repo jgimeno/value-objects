@@ -34,16 +34,16 @@ class Strings extends ValueObject
      */
     public static function fromFloat(float $double)
     {
-        return new self((string) $double);
+        return new static((string) $double);
     }
 
     public function toUpperCase()
     {
-        return new self(strtoupper($this->value));
+        return new static(strtoupper($this->value));
     }
 
     public function toLowerCase()
     {
-        return new self(strtolower($this->value));
+        return new static(strtolower($this->value));
     }
 }
