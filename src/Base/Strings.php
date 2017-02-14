@@ -36,4 +36,14 @@ class Strings extends ValueObject
     {
         return new self((string) $double);
     }
+
+    public function toUpperCase()
+    {
+        return new self(strtoupper($this->value));
+    }
+
+    public function toLowerCase()
+    {
+        return new self(strtolower($this->value));
+    }
 }
