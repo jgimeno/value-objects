@@ -20,4 +20,9 @@ class ValueObject
     {
         return (string) $this->value;
     }
+
+    public function equals(self $value2)
+    {
+        return $this->value === $value2->value;
+    }
 }
