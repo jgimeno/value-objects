@@ -1,0 +1,15 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+before_install:
+  - composer selfupdate
+
+before_script:
+  - composer install
+
+script:
+  - mkdir -p build/logs
+  - php vendor/bin/phpunit tests/
