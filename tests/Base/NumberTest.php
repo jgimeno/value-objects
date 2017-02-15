@@ -4,7 +4,9 @@ namespace ValueObjects\Base;
 
 use ValueObjects\ValueObject;
 
-class NumberTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class NumberTest extends TestCase
 {
     /**
      * @dataProvider nonNumericValues

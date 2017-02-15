@@ -2,7 +2,9 @@
 
 namespace ValueObjects\Base;
 
-class StringsTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class StringsTest extends TestCase
 {
     public function testWeCanCreateAStringFromAString()
     {

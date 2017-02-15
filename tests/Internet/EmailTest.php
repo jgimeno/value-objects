@@ -3,8 +3,9 @@
 namespace ValueObjects\Internet;
 
 use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
-class EmailTest extends \PHPUnit_Framework_TestCase
+class EmailTest extends TestCase
 {
     public function testWeCanCreateAnEmailObject()
     {

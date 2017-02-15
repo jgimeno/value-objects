@@ -2,7 +2,9 @@
 
 namespace ValueObjects;
 
-class ValueObjectTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ValueObjectTest extends TestCase
 {
     public function testWeCanDefineAValueObject()
     {
