@@ -55,11 +55,19 @@ class Strings extends ValueObject
         return new static(strtolower($this->value));
     }
 
-    public function trim()
+    /**
+     * Returns a new trimmed string.
+     * @return self
+     */
+    public function trim(): self
     {
         return new static(trim($this->value));
     }
 
+    /**
+     * Returns the length of a string.
+     * @return int
+     */
     public function length(): int
     {
         return strlen($this->value);
