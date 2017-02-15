@@ -37,13 +37,26 @@ class Strings extends ValueObject
         return new static((string) $double);
     }
 
+    /**
+     * Returns a new string converted to uppercase.
+     * @return self
+     */
     public function toUpperCase()
     {
         return new static(strtoupper($this->value));
     }
 
+    /**
+     * Returns a new string converted to low case.
+     * @return self
+     */
     public function toLowerCase()
     {
         return new static(strtolower($this->value));
+    }
+
+    public function trim()
+    {
+        return new static(trim($this->value));
     }
 }
