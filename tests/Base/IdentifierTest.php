@@ -2,7 +2,9 @@
 
 namespace ValueObjects\Base;
 
-class IdentifierTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class IdentifierTest extends TestCase
 {
     public function testWeCanCreateAnIdentifierUsingStaticMethodAndCheckEquality()
     {

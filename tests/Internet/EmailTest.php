@@ -3,8 +3,9 @@
 namespace ValueObjects\Internet;
 
 use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
 
-class EmailTest extends \PHPUnit_Framework_TestCase
+class EmailTest extends TestCase
 {
     public function testWeCanCreateAnEmailObject()
     {
@@ -23,7 +24,7 @@ class EmailTest extends \PHPUnit_Framework_TestCase
         new Email($email);
     }
 
-    public function invalidEmails()
+    public function invalidEmails() : array
     {
         $set = [];
 

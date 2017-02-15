@@ -4,7 +4,9 @@ namespace ValueObjects\Base;
 
 use ValueObjects\ValueObject;
 
-class NumberTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class NumberTest extends TestCase
 {
     /**
      * @dataProvider nonNumericValues
@@ -16,7 +18,7 @@ class NumberTest extends \PHPUnit_Framework_TestCase
         new Number($value);
     }
 
-    public function nonNumericValues()
+    public function nonNumericValues() : array
     {
         $set = [];
 
@@ -49,7 +51,7 @@ class NumberTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($numberAsString, $number);
     }
 
-    public function numericValuesAndStringConversions()
+    public function numericValuesAndStringConversions() : array
     {
         $set = [];
 
