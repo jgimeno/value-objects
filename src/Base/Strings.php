@@ -59,4 +59,9 @@ class Strings extends ValueObject
     {
         return new static(trim($this->value));
     }
+
+    public function length(): int
+    {
+        return strlen($this->value);
+    }
 }

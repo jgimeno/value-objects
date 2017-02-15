@@ -40,6 +40,12 @@ class StringsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals("this is not lower case", $stringLowerCase);
     }
 
+    public function testWeCanKnowTheLengthOfAString()
+    {
+        $string = new Strings("Hello");
+        $this->assertEquals(5, $string->length());
+    }
+
     public function testWeCanTrimAString()
     {
         $stringNotTrimmed = new Strings(" The string ");
