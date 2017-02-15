@@ -24,7 +24,7 @@ class EmailTest extends TestCase
         new Email($email);
     }
 
-    public function invalidEmails()
+    public function invalidEmails() : array
     {
         $set = [];
 
