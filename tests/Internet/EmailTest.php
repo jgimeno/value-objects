@@ -23,7 +23,7 @@ class EmailTest extends \PHPUnit_Framework_TestCase
         new Email($email);
     }
 
-    public function invalidEmails()
+    public function invalidEmails() : array
     {
         $set = [];
 
