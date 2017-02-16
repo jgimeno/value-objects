@@ -24,7 +24,7 @@ class Identifier extends ValueObject
         parent::__construct($identifier);
     }
 
-    public function equals(ValueObject $identifier)
+    public function equals(ValueObject $identifier): bool
     {
         return (string) $this == (string) $identifier;
     }
@@ -34,7 +34,7 @@ class Identifier extends ValueObject
         return new static(Uuid::uuid1());
     }
 
-    public static function fromString(string $identifier)
+    public static function fromString(string $identifier): self
     {
         return new static(Uuid::fromString($identifier));
     }
