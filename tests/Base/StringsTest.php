@@ -56,4 +56,13 @@ class StringsTest extends TestCase
         $this->assertEquals(" The string ", $stringNotTrimmed);
         $this->assertEquals("The string", $stringTrimmed);
     }
+
+
+    public function testStringsWorkAlsoWithMultiByte()
+    {
+        $multiBytes = "Pîns grøw with fó®†une!";
+        $strings = new Strings($multiBytes);
+
+        $this->assertEquals(mb_strlen($multiBytes), $strings->length());
+    }
 }

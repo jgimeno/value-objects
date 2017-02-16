@@ -70,6 +70,6 @@ class Strings extends ValueObject
      */
     public function length(): int
     {
-        return strlen($this->value);
+        return mb_strlen($this->value);
     }
 }
