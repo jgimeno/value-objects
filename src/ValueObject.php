@@ -16,12 +16,12 @@ class ValueObject
         $this->value = $value;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return (string) $this->value;
     }
 
-    public function equals(self $value2)
+    public function equals(self $value2): bool
     {
         return $this->value === $value2->value;
     }

@@ -6,7 +6,7 @@ use ValueObjects\ValueObject;
 
 /**
  * Class Number
- * Value object that represents a number. It can perform basic artihmetical operations.
+ * Value object that represents a number. It can perform basic arithmetical operations.
  * @package ValueObjects\Base
  */
 class Number extends ValueObject
@@ -14,7 +14,6 @@ class Number extends ValueObject
     public function __construct($value)
     {
         $this->validate($value);
-
         parent::__construct($value);
     }
 
