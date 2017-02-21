@@ -16,7 +16,7 @@ class IpAddress extends ValueObject
         parent::__construct($ipAddress);
     }
 
-    private function validate($ipAddress): void
+    private function validate($ipAddress)
     {
         if (filter_var($ipAddress, FILTER_VALIDATE_IP) === false) {
             throw new \InvalidArgumentException("$ipAddress is not a valid ip address.");
