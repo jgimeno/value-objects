@@ -23,4 +23,19 @@ class Email extends ValueObject
             throw new \InvalidArgumentException("$email is not a valid e-mail address.");
         }
     }
+
+    public function username(): string
+    {
+        return $this->getEmailParts()[0];
+    }
+
+    public function domain(): string
+    {
+        return $this->getEmailParts()[1];
+    }
+
+    private function getEmailParts(): array
+    {
+        return explode("@", $this->value);
+    }
 }

@@ -58,4 +58,16 @@ class EmailTest extends TestCase
 
         return $set;
     }
+
+    public function testWeCanGetUsernameFromEmail()
+    {
+        $email = new Email("jgimeno@gmail.com");
+        $this->assertSame("jgimeno", $email->username());
+    }
+
+    public function testWeCanGetDomainFromEmail()
+    {
+        $email = new Email("jgimeno@gmail.com");
+        $this->assertSame("gmail.com", $email->domain());
+    }
 }
