@@ -56,6 +56,6 @@ class Email extends ValueObject
 
     private function getEmailParts(): array
     {
-        return explode("@", $this->value);
+        return explode("@", $this->email);
     }
 }
