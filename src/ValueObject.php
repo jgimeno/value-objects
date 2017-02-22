@@ -7,7 +7,7 @@ namespace ValueObjects;
  * Generic Base class where all the other extend.
  * @package ValueObjects
  */
-class ValueObject
+abstract class ValueObject
 {
     protected $value;
 

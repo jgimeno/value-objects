@@ -31,7 +31,7 @@ class NumberTest extends TestCase
         ];
 
         $set['an object'] = [
-            'value' => new ValueObject(1)
+            'value' => new \DateTime()
         ];
 
         $set['a boolean'] = [
