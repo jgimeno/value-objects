@@ -12,9 +12,17 @@ use ValueObjects\ValueObject;
  */
 class Strings extends ValueObject
 {
+    /**
+     * @var string
+     */
+    private $value;
+
+    /**
+     * @param string $value
+     */
     public function __construct(string $value)
     {
-        parent::__construct($value);
+        $this->value = $value;
     }
 
     /**
@@ -28,7 +36,7 @@ class Strings extends ValueObject
     }
 
     /**
-     * Cretes a string from a double.
+     * Creates a string from a double.
      * @param float $double
      * @return Strings
      */
@@ -71,5 +79,13 @@ class Strings extends ValueObject
     public function length(): int
     {
         return mb_strlen($this->value);
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return $this->value;
     }
 }

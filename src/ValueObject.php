@@ -7,22 +7,17 @@ namespace ValueObjects;
  * Generic Base class where all the other extend.
  * @package ValueObjects
  */
-class ValueObject
+abstract class ValueObject implements ValueObjectInterface
 {
-    protected $value;
-
-    public function __construct($value)
+    /**
+     * @param ValueObjectInterface $other
+     * @return bool
+     */
+    public function equals(ValueObjectInterface $other): bool
     {
-        $this->value = $value;
-    }
-
-    public function __toString(): string
-    {
-        return (string) $this->value;
-    }
-
-    public function equals(self $value2): bool
-    {
-        return $this->value === $value2->value;
+        if (get_class($this) !== get_class($other)) {
+            throw new \InvalidArgumentException(sprintf('A Value Object of type %s can not be compared to another of type %s', get_class($this), get_class($other)));
+        }
+        return $this == $other;
     }
 }
