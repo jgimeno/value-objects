@@ -30,10 +30,6 @@ class NumberTest extends TestCase
             'value' => 'a string'
         ];
 
-        $set['an object'] = [
-            'value' => new ValueObject(1)
-        ];
-
         $set['a boolean'] = [
             'value' => true
         ];
