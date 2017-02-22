@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
-- Nothing for now.
+- Add domain and username method for Email value object.
 
 ## [0.2.0] 2017-02-21
 ### Added

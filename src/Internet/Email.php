@@ -43,4 +43,19 @@ class Email extends ValueObject
     {
         return $this->email;
     }
+  
+    public function username(): string
+    {
+        return $this->getEmailParts()[0];
+    }
+
+    public function domain(): string
+    {
+        return $this->getEmailParts()[1];
+    }
+
+    private function getEmailParts(): array
+    {
+        return explode("@", $this->value);
+    }
 }
