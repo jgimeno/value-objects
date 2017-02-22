@@ -8,6 +8,9 @@ class BooleanTest extends TestCase
 {
     /**
      * @dataProvider intToBooleanValues
+     *
+     * @param int $int
+     * @param bool $expectedResult
      */
     public function testABooleanCanBeCreatedFromInt(int $int, bool $expectedResult)
     {
@@ -43,6 +46,9 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider stringToBooleanValues
+     *
+     * @param string $string
+     * @param bool $expectedValue
      */
     public function testABooleanCanBeCreatedFromString(string $string, bool $expectedValue)
     {
@@ -84,6 +90,10 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider andOperatorValues
+     *
+     * @param bool $value
+     * @param bool $anotherValue
+     * @param bool $expectedValue
      */
     public function testWeCanApplyANDOperatorToBoolean(bool $value, bool $anotherValue, bool $expectedValue)
     {
@@ -127,6 +137,10 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider orOperatorValues
+     *
+     * @param bool $value
+     * @param bool $anotherValue
+     * @param bool $expectedValue
      */
     public function testWeCanApplyOROperatorToBoolean(bool $value, bool $anotherValue, bool $expectedValue)
     {
@@ -170,6 +184,10 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider xorOperatorValues
+     *
+     * @param bool $value
+     * @param bool $anotherValue
+     * @param bool $expectedValue
      */
     public function testWeCanApplyXOROperatorToBoolean(bool $value, bool $anotherValue, bool $expectedValue)
     {
@@ -215,6 +233,9 @@ class BooleanTest extends TestCase
 
     /**
      * @dataProvider notOperatorValues()
+     *
+     * @param bool $value
+     * @param bool $expectedValue
      */
     public function testWeCanApplyNOTOperatorToBoolean(bool $value, bool $expectedValue)
     {
