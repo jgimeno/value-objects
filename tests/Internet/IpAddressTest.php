@@ -6,7 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 class IpAddressTest extends TestCase
 {
-    public function testWeCanCreateAnIpAdress()
+    public function testWeCanCreateAnIpAddress()
     {
         $ip = new IpAddress("192.168.1.1");
         $this->assertInstanceOf(IpAddress::class, $ip);

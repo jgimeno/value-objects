@@ -14,8 +14,6 @@ class IdentifierTest extends TestCase
 
         $identifierFromString = Identifier::fromString($identifierAsString);
 
-        $this->assertEquals($identifierFromString, $identifier);
-        $this->assertNotEquals($identifier, $identifier2);
         $this->assertTrue($identifier->equals($identifierFromString));
         $this->assertFalse($identifier2->equals($identifierFromString));
     }

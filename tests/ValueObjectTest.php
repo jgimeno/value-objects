@@ -18,7 +18,7 @@ class ValueObjectTest extends TestCase
         $this->assertEquals("123", $value);
     }
 
-    public function testEqualityIsBasedOnValueAndNotOnInstace()
+    public function testEqualityIsBasedOnValueAndNotOnInstance()
     {
         $value1 = $this->valueObjectWithValue(123);
         $value2 = $this->valueObjectWithValue(123);
