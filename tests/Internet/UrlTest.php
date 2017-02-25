@@ -3,12 +3,9 @@
 namespace ValueObjects\Internet;
 
 use PHPUnit\Framework\TestCase;
-use ValueObjects\Exceptions\InvalidUrlException;
 
 /**
  * UrlTest
- *
- * @author Sergio de Candelario <sergio.decandelario@gmail.com>
  */
 class UrlTest extends TestCase
 {
@@ -19,7 +16,8 @@ class UrlTest extends TestCase
      */
     public function testInvalidUrl($invalidUrl)
     {
-        $this->expectException(InvalidUrlException::class);
+        $this->expectException(\InvalidArgumentException::class);
+
         new Url($invalidUrl);
     }
 
