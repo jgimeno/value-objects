@@ -19,23 +19,42 @@ use ValueObjects\ValueObject;
  */
 class Identifier extends ValueObject
 {
+    /**
+     * @var UuidInterface
+     */
+    private $value;
+
+    /**
+     * Identifier constructor.
+     * @param UuidInterface $identifier
+     */
     public function __construct(UuidInterface $identifier)
     {
-        parent::__construct($identifier);
+        $this->value = $identifier;
     }
 
-    public function equals(ValueObject $identifier): bool
-    {
-        return (string) $this == (string) $identifier;
-    }
-
+    /**
+     * @return Identifier
+     */
     public static function generate(): self
     {
         return new static(Uuid::uuid1());
     }
 
+    /**
+     * @param string $identifier
+     * @return Identifier
+     */
     public static function fromString(string $identifier): self
     {
         return new static(Uuid::fromString($identifier));
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return (string) $this->value;
     }
 }

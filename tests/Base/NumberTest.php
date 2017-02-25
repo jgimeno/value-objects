@@ -2,8 +2,6 @@
 
 namespace ValueObjects\Base;
 
-use ValueObjects\ValueObject;
-
 use PHPUnit\Framework\TestCase;
 
 class NumberTest extends TestCase
@@ -31,7 +29,7 @@ class NumberTest extends TestCase
         ];
 
         $set['an object'] = [
-            'value' => new ValueObject(1)
+            'value' => new \stdClass()
         ];
 
         $set['a boolean'] = [
