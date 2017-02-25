@@ -11,20 +11,37 @@ use ValueObjects\ValueObject;
  */
 class Number extends ValueObject
 {
-    public function __construct($value)
+    /**
+     * @var mixed
+     */
+    private $number;
+
+    /**
+     * Number constructor.
+     * @param $number
+     */
+    public function __construct($number)
     {
-        $this->validate($value);
-        parent::__construct($value);
+        $this->validate($number);
+        $this->number = $number;
     }
 
     /**
      * Validates that the number is numeric.
-     * @param $value
+     * @param mixed $value
      */
     protected function validate($value)
     {
         if (!is_numeric($value) || is_bool($value)) {
             throw new \InvalidArgumentException("Can't create a Number from a non numeric value.");
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString(): string
+    {
+        return (string) $this->number;
     }
 }
