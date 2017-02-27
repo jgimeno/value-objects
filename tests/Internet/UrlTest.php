@@ -4,14 +4,10 @@ namespace ValueObjects\Internet;
 
 use PHPUnit\Framework\TestCase;
 
-/**
- * UrlTest
- */
 class UrlTest extends TestCase
 {
     /**
      * @dataProvider invalidUrls
-     *
      * @param $invalidUrl
      */
     public function testInvalidUrl($invalidUrl)
@@ -31,9 +27,6 @@ class UrlTest extends TestCase
         ];
     }
 
-    /**
-     *
-     */
     public function testValidUrl()
     {
         $url = new Url("http://www.google.es");

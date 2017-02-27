@@ -4,8 +4,11 @@ namespace ValueObjects\Internet;
 
 use ValueObjects\ValueObject;
 
+
 /**
- * Url
+ * Class Url
+ * Value object that represents a Url Address.
+ * @package ValueObjects\Internet
  */
 class Url extends ValueObject
 {
@@ -13,7 +16,6 @@ class Url extends ValueObject
 
     /**
      * Url constructor.
-     *
      * @param string $url
      */
     public function __construct(string $url)
